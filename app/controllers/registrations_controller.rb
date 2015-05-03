@@ -3,12 +3,12 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
     super do |user|
-      if user.persisted?
-        user.update_attribute(:is_owner, true)
-        user.owner.create
-      else
+      #if user.persisted?
+       # user.update_attribute(:is_owner, true)
+       # user.owner.create
+      #else
         flash.now[:alert] = user.errors.full_messages.to_sentence
-      end
+      #end
     end
   end
 
