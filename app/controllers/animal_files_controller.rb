@@ -1,0 +1,2 @@
+class AnimalFilesController < ApplicationController
+end
