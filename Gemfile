@@ -2,16 +2,28 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.0'
 gem 'sqlite3'
+
+gem 'sdoc', group: :doc
+
+#assets
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'jbuilder'
-gem 'sdoc', group: :doc
+gem 'jquery-turbolinks'
+gem 'bitters'
+gem 'bourbon'
+gem 'neat'
+gem 'normalize-rails'
+gem 'jquery-slick-rails'
+gem 'ruby-hmac'
 
 #authentication
 gem 'devise'
+
+##JSON serialization
+gem 'jbuilder'
 
 group :development, :test do
   gem 'byebug'
