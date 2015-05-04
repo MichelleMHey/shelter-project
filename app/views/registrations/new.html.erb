@@ -1,0 +1,16 @@
+<div class="new-registration">
+  <div class="user-sign-up">
+    <h1>Sign up to share or adopt a pet!</h1>
+    <%= simple_form_for User.new, url: user_registration_path do |f| %>
+      <%= f.input :email, placeholder: "Email", required: true, label: false %>
+      <%= f.input :password, placeholder: "Password", required: true, label: false %>
+      <%= f.input :password_confirmation, placeholder: "Password Confirm", required: true, label: false %>
+      <h3>Check if you want to adopt or promote a pet to be adopted:</h3>
+      <div id="radio-buttons">
+        Adopter: <%= radio_button_tag 'radio_button', 'adopter' %>
+        Shelter/Foster :<%= radio_button_tag 'radio_button', 'owner' %>
+      </div>
+      <%= f.submit 'SIGN UP' %>
+    <% end %>
+  </div>
+</div>

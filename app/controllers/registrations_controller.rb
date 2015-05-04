@@ -3,12 +3,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
     super do |user|
-      #if user.persisted?
-       # user.update_attribute(:is_owner, true)
-       # user.owner.create
-      #else
-        flash.now[:alert] = user.errors.full_messages.to_sentence
-      #end
+      flash.now[:alert] = user.errors.full_messages.to_sentence
     end
   end
 
@@ -23,12 +18,11 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def after_sign_up_path_for(resource)
-    root_path
-    # if params[:radio_button] == 'author'
-    #    new_publishers_author_path
-    # else
-    #   edit_owners_owner_path
-    # end
+    if params[:radio_button] == 'adopter'
+       new_consumer_path
+    else
+      new_owner_path
+    end
   end
 
   def after_update_path_for(resource)

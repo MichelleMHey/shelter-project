@@ -1,0 +1,39 @@
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h4 {
+  font-size: 1.0em;
+}
+
+html body {
+  margin: 0;
+  background-color: #FCFEF5;
+}
+
+.notice, .alert {
+  background-color: #FCFEF5;
+}
+
+.main-wrapper {
+  .wrapper {
+    @include outer-container;
+  }
+}
+
+input[type="submit"] {
+  background: #65E1D5;
+  border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+  background: #65E1D5;
+}

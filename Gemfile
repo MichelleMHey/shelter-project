@@ -19,6 +19,8 @@ gem 'normalize-rails'
 gem 'jquery-slick-rails'
 gem 'ruby-hmac'
 
+gem 'simple_form'
+
 #authentication
 gem 'devise'
 

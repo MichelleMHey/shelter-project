@@ -4,8 +4,18 @@ Rails.application.routes.draw do
   
   root 'static#home'
 
+  scope '/home/' do
+    controller :users do
+      get '', action: :show, as: 'user'
+    end
+  end
+
   resources :animals
-  resources :owners
+  
+  resources :owners do
+    resources :animals
+  end
+
   resources :consumers
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

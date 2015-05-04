@@ -14,18 +14,6 @@
 
 @import "static/home";
 @import "shared/header";
-
-html body {
-  margin: 0;
-  background-color: #FCFEF5;
-}
-
-.notice, .alert {
-  background-color: #FCFEF5;
-}
-
-.main-wrapper {
-  .wrapper {
-    @include outer-container;
-  }
-}
+@import "shared/footer";
+@import "register/new";
+@import "standard";
