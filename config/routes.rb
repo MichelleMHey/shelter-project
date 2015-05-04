@@ -11,8 +11,11 @@ Rails.application.routes.draw do
   end
 
   resources :animals
+
+  get 'owners', to: 'owners#'
   
-  resources :owners do
+  namespace :owners do
+    resources :owners
     resources :animals
   end
 

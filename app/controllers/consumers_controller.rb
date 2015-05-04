@@ -1,16 +1,41 @@
 class ConsumersController < ApplicationController
   before_filter :authenticate_user!
-  before_action :set_consumer, only: [:edit, :update, :create]
 
-  private 
+  def index
+    
+  end
 
-  def set_consumer
-    @consumer = current_user.consumer
-    if @consumer.nil?
-      redirect_to new_consumer_path
-      false
+  def new
+    @consumer = Consumer.new
+  end
+
+  def create
+    @consumer = Consumer.new consumer_params
+    if @consumer.save
+      redirect_to consumer_path(@consumer)
+    else
+      render new_consumer_path
     end
   end
+
+  def show
+    @consumer = Consumer.find params[:id]
+  end
+
+  def edit
+    @consumer = Consumer.find params[:id]
+  end
+
+  def update
+    @consumer = Consumer.new consumer_params
+    if @consumer.save
+      redirect_to consumer_path(@consumer)
+    else
+      render new_consumer_path
+    end
+  end
+
+  private 
 
   def consumer_params
     params.require(:consumer).permit(:name, :username, :zip_code, :phone, :consumer_image, :description, :user_id)

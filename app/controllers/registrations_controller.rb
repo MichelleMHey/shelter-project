@@ -21,7 +21,7 @@ class RegistrationsController < Devise::RegistrationsController
     if params[:radio_button] == 'adopter'
        new_consumer_path
     else
-      new_owner_path
+      new_owners_owner_path
     end
   end
 

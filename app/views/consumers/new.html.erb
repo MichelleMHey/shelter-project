@@ -1,0 +1,19 @@
+<div class="consumer-form-wrapper">
+  <h1>User Profile Information:</h1>
+  <%= form_for @consumer, url: { action: "create" } do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+    <%= f.label "Zip Code" %>
+    <%= f.text_field :zip_code %>
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+    <%= f.label "Profile Image" %>
+    <%= file_field_tag :consumer_image %>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.submit 'Create' %>
+  <% end %>
+</div>

@@ -13,7 +13,19 @@
 @import "base/tables";
 
 @import "static/home";
+
 @import "shared/header";
 @import "shared/footer";
+
+
 @import "register/new";
+
 @import "standard";
+
+@import "owners/new";
+@import "owners/show";
+@import "owners/edit";
+
+@import "consumers/new";
+@import "consumers/show";
+@import "consumers/edit";

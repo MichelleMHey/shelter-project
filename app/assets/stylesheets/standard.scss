@@ -24,6 +24,8 @@ html body {
 }
 
 .main-wrapper {
+  padding-top: 3%;
+  padding-bottom: 5%;
   .wrapper {
     @include outer-container;
   }
@@ -32,6 +34,7 @@ html body {
 input[type="submit"] {
   background: #65E1D5;
   border-radius: 5px;
+  text-transform: uppercase;
 }
 
 input[type="submit"]:hover {
