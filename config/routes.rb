@@ -12,7 +12,6 @@ Rails.application.routes.draw do
 
   resources :animals
 
-  get 'owners', to: 'owners#'
   
   namespace :owners do
     resources :owners

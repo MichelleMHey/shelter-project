@@ -8,6 +8,7 @@ class Owners::BaseController < ApplicationController
 
     def authenticate_owner!
       authenticate_user!
+      raise unless current_user.is_owner?
     end
 
     def set_current_owner

@@ -20,6 +20,8 @@ gem 'jquery-slick-rails'
 gem 'ruby-hmac'
 
 gem 'simple_form'
+gem 'cancancan'
+gem 'therubyracer'
 
 #authentication
 gem 'devise'

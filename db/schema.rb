@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150503230947) do
+ActiveRecord::Schema.define(version: 20150503204445) do
 
   create_table "animal_files", force: :cascade do |t|
     t.string  "scrapbook_image"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 20150503230947) do
     t.datetime "remember_created_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "is_owner"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

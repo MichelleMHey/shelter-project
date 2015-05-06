@@ -5,6 +5,14 @@ class User < ActiveRecord::Base
   has_one :consumer
   has_one :owner
 
+  def owner?
+    owner.present?
+  end
+
+  def consumer?
+    !owner?
+  end
+
   private
   
 end

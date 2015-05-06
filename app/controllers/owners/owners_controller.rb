@@ -1,19 +1,21 @@
 class Owners::OwnersController < Owners::BaseController
+  before_action :set_owner, only: [:show, :edit, :update]
+  respond_to :html, :xml, :json
 
   def index
     
   end
 
   def new
-    @owner = Owner.new
+    @owner = current_user.build_owner
   end
 
   def create
-    @owner = Owner.create owner_params
+    @owner = current_user.create_owner owner_params
     if @owner.save
       redirect_to owners_owner_path(@owner)
     else
-      render_new_owners_owner
+      render_new_owner
     end
   end
 
@@ -29,6 +31,14 @@ class Owners::OwnersController < Owners::BaseController
   end
 
   private
+
+  def set_owner
+    @owner = current_user.owner
+    if @owner.nil?
+      redirect_to new_owners_owner_path
+      false
+    end
+  end
 
   def owner_params
     params.require(:owner).permit(:name, :phone, :address, :second_address, :city, :state, :zip, :profile_image, :website, :user_id, :hero_image, :email, :facebook_url, :twitter_url, :instagram_url)
