@@ -1,0 +1,7 @@
+.form {
+  @include outer-container;
+  .wrapper {
+    padding-top: 3%;
+    padding-bottom: 5%;
+  }
+}

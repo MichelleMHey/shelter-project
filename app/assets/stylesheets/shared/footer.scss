@@ -8,7 +8,7 @@
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
-  background: #DDE0CF;
+  background: #8DCDC1;
   padding: ($base-spacing * 2) $gutter;
   width: 100%;
 
@@ -52,7 +52,7 @@
   }
 
   li a {
-    color: #001860;
+    color: #fff;
     text-decoration: none;
 
     &:focus,
@@ -62,7 +62,7 @@
   }
 
   li h3 {
-    color: #001860;
+    color: #fff;
     font-size: 1em;
     font-weight: 800;
     margin-bottom: 0.4em;
@@ -75,7 +75,7 @@
   }
 
   p {
-    color: #001860;
+    color: #fff;
     font-size: 0.9em;
     line-height: 1.5em;
     margin: auto;

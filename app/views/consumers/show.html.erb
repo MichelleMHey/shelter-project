@@ -1,1 +1,25 @@
-<h1>test show consumers</h1>
+<div class="show-consumer-page">
+  <div class="wrapper">
+    <div id="consumer-image">
+      <%= image_tag @consumer.consumer_image_url.to_s %>
+    </div>
+    <div id="consumer-name">
+      <%= @consumer.name %>
+    </div>
+    <div id="consumer-username">
+      <%= @consumer.username %>
+    </div>
+    <div id="consumer-zip-code">
+      <%= @consumer.zip_code %>
+    </div>
+    <div id="consumer-phone">
+      <%= @consumer.phone %>
+    </div>
+    <div id="consumer-email">
+      <%= @consumer.user.email %>
+    </div>
+    <div id="consumer-description">
+      <%= @consumer.description %>
+    </div>
+  </div>
+</div>

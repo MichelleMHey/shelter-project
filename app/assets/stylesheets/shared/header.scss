@@ -19,7 +19,7 @@ header.navigation {
   $navigation-submenu-width: 12em;
   $horizontal-bar-mode: $large-screen;
 
-  background-color: #001860;
+  background-color: #7C786A;
   border-bottom: 1px solid darken($navigation-background, 10);
   min-height: $navigation-height;
   width: 100%;
@@ -30,6 +30,12 @@ header.navigation {
     @include outer-container;
     position: relative;
     z-index: 9999;
+
+    img {
+      float: left;
+      width: 40px;
+      margin-right: 10px;
+    }
   }
 
   .logo {
@@ -121,7 +127,7 @@ header.navigation {
     }
 
     a {
-      color: $navigation-color;
+      color: #fff;
       display: inline-block;
       font-weight: 600;
       text-decoration: none;
@@ -132,7 +138,7 @@ header.navigation {
 
       &:focus,
       &:hover {
-        color: $navigation-color-hover;
+        color: #fff;
       }
     }
   }
@@ -306,7 +312,7 @@ header.navigation {
 
       input[type=search] {
         @include box-sizing(border-box);
-        background: #FCFEF5;
+        background: #f6f6f6;
         border-radius: $base-border-radius * 2;
         border: $navigation-search-border;
         color: $navigation-color;
@@ -355,7 +361,7 @@ header.navigation {
 .sign-up-log-out {
   display: none;
   @include media($desktop) {
-    background: #65E1D5;
+    background: #EB6E44;
     padding: 8px;
     display: -webkit-box;
     margin-top: 10px;

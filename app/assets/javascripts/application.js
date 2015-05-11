@@ -13,3 +13,11 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require header
+//= require jquery.flexslider-min
+
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
+

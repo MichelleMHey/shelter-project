@@ -1,1 +1,49 @@
-<h1>test owners show</h1>
+<div class="owners-show-page">
+  <div class="wrapper">
+    <div id="owner-hero">
+      <%= image_tag @owner.hero_image_url.to_s %>
+    </div>
+    <div id="owner-profile-image">
+      <%= image_tag @owner.profile_image_url.to_s %>
+    </div>
+    <div id="number-of-animals">
+      <%= number_of_animals(@animals) %> for adoption
+    </div>
+    <div id="owner-name">
+      <%= @owner.name %>
+    </div>
+    <div id="owner-phone">
+      <%= @owner.phone %>
+    </div>
+    <div id="owner-address">
+      <%= @owner.address %>
+    </div>
+    <div id="owner-second-address">
+      <%= @owner.second_address %>
+    </div>
+    <div id="owner-city">
+      <%= @owner.city %>
+    </div>
+    <div id="owner-state">
+      <%= @owner.state %>
+    </div>
+    <div id="owner-zip">
+      <%= @owner.zip %>
+    </div>
+    <div id="owner-email">
+      <%= @owner.email %>
+    </div>
+    <div id="owner-facebook-url">
+      <%= @owner.facebook_url %>
+    </div>
+    <div id="owner-twitter-url">
+      <%= @owner.twitter_url %>
+    </div>
+    <div id="owner-instagram-url">
+      <%= @owner.instagram_url %>
+    </div>
+    <div id="owner-description">
+      <%= @owner.description %>
+    </div>
+  </div>
+</div>

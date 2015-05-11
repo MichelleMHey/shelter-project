@@ -4,7 +4,7 @@ class SessionsController < Devise::SessionsController
   protected
 
   def after_sign_in_path_for(resource)
-    root_path
+    owners_animals_path
     # if resource.owner?
     #   owners_owner_path
     # else

@@ -1,1 +1,26 @@
-<h1>test to create an animal</h1>
+<div class="owner-animal-wrapper">
+  <div class="wrapper">
+    <h1>Add a Pet</h1>
+    <div class="animal-form">
+      <%= form_for @animal, url: { action: "create" }, html: { multipart: true } do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <%= f.label :breed %>
+        <%= f.text_field :breed %>
+        <%= f.label :age %>
+        <%= f.text_field :age %>
+        <%= f.label :location %>
+        <%= f.text_field :location %>
+        <%= f.label :profile_image %>
+        <%= f.file_field :profile_image %>
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+        <%= f.label :feature %>
+        <%= f.check_box :feature %>
+        <%= f.label :scrapbook_image, "Upload Images Of Your Pet!" %>
+        <%= file_field_tag "files[]", type: :scrapbook_image %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>

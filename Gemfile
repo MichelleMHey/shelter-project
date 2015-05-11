@@ -18,6 +18,7 @@ gem 'neat'
 gem 'normalize-rails'
 gem 'jquery-slick-rails'
 gem 'ruby-hmac'
+gem 'flexslider'
 
 gem 'simple_form'
 gem 'cancancan'
@@ -29,10 +30,16 @@ gem 'devise'
 ##JSON serialization
 gem 'jbuilder'
 
+# Carrierwave (file uploads)
+gem 'carrierwave'
+gem 'mini_magick'
+
 group :development, :test do
-  gem 'byebug'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'fabrication'
   gem 'rspec-rails'
-  gem 'web-console'
-  gem 'spring'
+  gem 'pry-byebug'
 end
 
+gem 'faker'

@@ -1,0 +1,23 @@
+<div class="animal-show-page">
+  <div class="hero">
+    <div class="hero-inner">
+      <a href="" class="hero-logo"><%= image_tag @animal.profile_image_url.to_s %></a>
+      <div id="animal-background">
+        <h1><%= @animal.name %></h1>
+        <div id="breed"><%= @animal.breed %></div>
+        <div id="age">Age: <%= @animal.age %></div>
+        <div id="email"><%= @animal.owner.email %></div>
+        <div id="location"><%= @animal.location %></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div id="description"><%= @animal.description %></div>
+    <div class="animal-scrap-book">
+      <%= image_tag "d1.JPG" %>
+      <%= image_tag "d2.jpg" %>
+      <%= image_tag "d3.JPG" %>
+    </div>
+  </div>
+</div>
+

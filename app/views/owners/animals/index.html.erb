@@ -1,0 +1,10 @@
+<div class="owners-animals-index">
+  <div class="wrapper">
+    <% @animals.each do |animal| %>
+      <%= link_to(animal) do %>
+        <div id="animal-image"><%= image_tag animal.profile_image_url.to_s %></div>
+        <div id="animal-name"><%= animal.name %></div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

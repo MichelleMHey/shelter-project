@@ -1,0 +1,7 @@
+.owner-animal-wrapper {
+  .wrapper {
+    @include outer-container;
+    padding-top: 3%;
+    padding-bottom: 5%;
+  }
+}

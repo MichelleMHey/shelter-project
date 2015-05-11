@@ -1,9 +1,14 @@
 class Owners::OwnersController < Owners::BaseController
-  before_action :set_owner, only: [:show, :edit, :update]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_owner, only: [:edit, :update]
   respond_to :html, :xml, :json
 
   def index
-    
+    @owners = Owner.all
+  end
+
+  def show
+    @owner = Owner.find(params[:id])
   end
 
   def new
@@ -24,7 +29,7 @@ class Owners::OwnersController < Owners::BaseController
 
   def update
     if @owner.update owner_params
-      redirect_to owner_path
+      redirect_to owners_owner_path(@owner)
     else
       render edit_owner_path
     end

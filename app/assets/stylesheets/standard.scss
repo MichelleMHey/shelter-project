@@ -16,20 +16,13 @@ h4 {
 
 html body {
   margin: 0;
-  background-color: #FCFEF5;
+  background-color: #f6f6f6;
 }
 
 .notice, .alert {
-  background-color: #FCFEF5;
+  display: none;
 }
 
-.main-wrapper {
-  padding-top: 3%;
-  padding-bottom: 5%;
-  .wrapper {
-    @include outer-container;
-  }
-}
 
 input[type="submit"] {
   background: #65E1D5;

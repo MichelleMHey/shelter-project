@@ -1,8 +1,8 @@
 <header class="navigation" role="banner">
   <div class="navigation-wrapper">
-    <a href="javascript:void(0)" class="logo">
+    <%= link_to root_path do %>
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo Image">
-    </a>
+    <% end %>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
@@ -10,38 +10,36 @@
         <% if current_user %>
           <li class="nav-link"><%= link_to "Log out", destroy_user_session_path, :method => :get, :class => "sign-up-log-out-mobile" %></li>
         <% end %>
-        <li class="nav-link more"><a href="javascript:void(0)">Pets</a>
-          <ul class="submenu">
-            <li><a href="javascript:void(0)">Submenu Item</a></li>
-            <li><a href="javascript:void(0)">Another Item</a></li>
-            <li class="more"><a href="javascript:void(0)">Item with submenu</a>
-              <ul class="submenu">
-                <li><a href="javascript:void(0)">Sub-submenu Item</a></li>
-                <li><a href="javascript:void(0)">Another Item</a></li>
-              </ul>
-            </li>
-            <li class="more"><a href="javascript:void(0)">Another submenu</a>
-              <ul class="submenu">
-                <li><a href="javascript:void(0)">Sub-submenu</a></li>
-                <li><a href="javascript:void(0)">An Item</a></li>
-              </ul>
-            </li>
+        <li class="nav-link"><%= link_to "PETS", animals_path %></li>
+        <% if current_user %>
+          <li class="nav-link more"><a href="javascript:void(0)">My Account</a>
+        <% end %>
+          <ul class="submenu" id="more-link">
+              <li class="more">
+                <% if current_user.present? && current_user.owner.name.present? %>
+                <%= link_to "PROFILE", owners_owner_path(current_user.owner) %>
+                
+                <ul class="submenu">
+                  <li><%= link_to "PROFILE", owners_owner_path(current_user.owner) %></li>
+                  <li><%= link_to "Edit Profile", edit_owners_owner_path(current_user.owner) if current_user.owner && current_user.owner.id %></li>
+                  <li><%= link_to "My Pet's", owners_animals_path %></li>
+                  <li><%= link_to "Add A Pet", new_owners_animal_path %></li>
+                </ul>
+                <% end %>
+              </li>
+            <li><%= link_to "Settings",  edit_user_registration_path %></li>
+            <li><%= link_to "Log out", destroy_user_session_path, :method => :get %></li>
           </ul>
         </li>
+
+
+
         <% if !current_user %>
           <li class="nav-link" id="login"><%= link_to "Login", new_user_session_path %></li>
         <% end %>
       </ul>
     </nav>
     <div class="navigation-tools">
-      <div class="search-bar">
-        <form role="search">
-          <input type="search" placeholder="Enter Search" />
-          <button type="submit">
-            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
-          </button>
-        </form>
-      </div>
       <% if !current_user %>
         <%= link_to "Sign Up", new_user_registration_path, :class => "sign-up-log-out" %>
       <% end %>

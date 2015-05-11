@@ -1,0 +1,24 @@
+.owners-animals-index {
+  .wrapper {
+    padding-top: 3%;
+    padding-bottom: 5%;
+    @include outer-container;
+    a {
+      @include media($mobile-only) {
+        @include shift(3);
+        @include span-columns(6);
+      }
+      @include media($tablet) {
+        @include span-columns(3);
+
+        border: 1px solid gray;
+        padding: 10px;
+      }
+
+      #animal-name {
+        font-size: 1.5em;
+        color: #222222;
+      }
+    }
+  }
+}

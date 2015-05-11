@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150503204445) do
+ActiveRecord::Schema.define(version: 20150509235329) do
 
   create_table "animal_files", force: :cascade do |t|
     t.string  "scrapbook_image"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 20150503204445) do
     t.string  "facebook_url"
     t.string  "twitter_url"
     t.string  "instagram_url"
+    t.text    "description"
   end
 
   create_table "questions", force: :cascade do |t|

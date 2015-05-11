@@ -25,7 +25,15 @@
 @import "owners/new";
 @import "owners/show";
 @import "owners/edit";
+@import "owners/animals/new";
 
 @import "consumers/new";
 @import "consumers/show";
 @import "consumers/edit";
+
+@import "animals/show";
+@import "animals/index";
+
+@import "forms";
+
+@import "flexslider";
