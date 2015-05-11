@@ -32,6 +32,9 @@
       height: 22em;
       margin-bottom: 1em;
       float: left;
+      @include media($tablet) {
+        width: 35%;
+      }
       -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
       -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
       box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);

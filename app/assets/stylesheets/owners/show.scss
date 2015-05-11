@@ -1,0 +1,133 @@
+.owner-show-page {
+
+  #address,
+  #city,
+  #zip {
+    text-align: center;
+    font-size: 1.2em;
+    color: #5E5959;
+  }
+
+  #phone, 
+  #website,
+  #email {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #5E5959;
+  }
+
+  #description {
+    @include outer-container;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+  }
+
+   .hero {  
+    $base-border-radius: 3px !default;
+    $action-color: #477DCA !default;
+    $large-screen: em(860) !default;
+    $hero-background-top: #7F99BE; 
+    $hero-background-bottom: #20392B;
+    $hero-color: white;
+    $gradient-angle: 10deg;
+  /*  $hero-image: '';
+  */
+  /*  @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
+  */  background-color: #D3E397;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 3em;
+
+    .hero-logo img {
+      height: 22em;
+      margin-bottom: 1em;
+      float: left;
+      @include media($tablet) {
+        width: 35%;
+      }
+      -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+      box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+
+    .hero-inner {
+      @include outer-container;
+      @include clearfix;
+      color: $hero-color;
+      margin: auto;
+      padding: 3.5em;
+
+      #animal-background {
+        @include media($tablet) {
+          background: transparent;
+          background: rgba(131, 124, 124, 0.5);
+          float: right;
+          width: 60%;
+          padding-bottom: 5%;
+          padding-top: 5%;
+          border-radius: 10px;
+        }
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 1.6em;
+        color: #5E5959;
+        margin: 0;
+        @include media($large-screen) {
+          font-size: 3em;
+        }
+      }
+
+      #email,
+      #location {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 1.3em;
+        font-weight: 600;
+        color: #5E5959;
+      }
+
+      #breed,
+      #age {
+        text-align: center;
+        font-size: 1.3em;
+        color: #5E5959;
+        font-style: italic;
+      }
+
+      .hero-copy {
+        text-align: center;
+        
+        h1 {
+          font-size: 1.6em;
+          margin-bottom: 0.5em;
+
+          @include media($large-screen) {
+            font-size: 3em;
+          }
+        }
+
+        p {
+          font-weight: 200;
+          line-height: 1.4em;
+          margin: 0 auto 3em auto; 
+
+          @include media($large-screen) {
+            font-size: 1.1em;
+            max-width: 40%;
+          }
+        }
+      }
+
+      button {
+        @include button(flat, $action-color);
+        padding: 0.7em 1em;
+      }
+    }
+  }
+}

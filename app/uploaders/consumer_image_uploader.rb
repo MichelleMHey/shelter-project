@@ -1,4 +1,4 @@
-# encoding: utf-8
+  # encoding: utf-8
 
 class ConsumerImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
@@ -17,7 +17,7 @@ class ConsumerImageUploader < CarrierWave::Uploader::Base
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   def default_url
-    ""
+    "placeholder-user.png"
   end
 
   def extension_white_list
