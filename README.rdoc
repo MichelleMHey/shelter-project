@@ -5,9 +5,9 @@
 5. rake db:seed
 6. run rails s
 
-*Note, images might render slowing, they are being pulled from the Internet.
+*Note, images might render slowly, they are being pulled from a URL.
 
-Gems Added: bitters, bourbon, neat, flexslider, simple_form, carrierwave, mini_magick, rspec-rails, pry-byebug, fabrication, faker
+Gems Added: bitters, bourbon, neat, flexslider, devise, simple_form, carrierwave, mini_magick, rspec-rails, pry-byebug, fabrication, faker
 
 HTML5 Elements: <header>, <footer>, <nav>
 
