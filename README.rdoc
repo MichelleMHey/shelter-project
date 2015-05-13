@@ -1,28 +1,21 @@
-== README
+1. Clone repo
+2. bundle install
+3. rake db:create
+4. rake db:migrate
+5. rake db:seed
+6. run rails s
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+*Note, images might render slowing, they are being pulled from the Internet.
 
-Things you may want to cover:
+Gems Added: bitters, bourbon, neat, flexslider, simple_form, carrierwave, mini_magick, rspec-rails, pry-byebug, fabrication, faker
 
-* Ruby version
+HTML5 Elements: <header>, <footer>, <nav>
 
-* System dependencies
+Class Inheritance: Used class inheritance in my Owners Controller.
 
-* Configuration
+Module Inclusion: CarrierWave
 
-* Database creation
+CSS3 Styling: Bourbon Neat.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+JavaScript: FlexSlider, Bourbon Neat
+ 
