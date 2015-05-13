@@ -1,3 +1,70 @@
-.home {
-  @include outer-container;
+@import 'mixins';
+
+#titles {
+  text-align: center;
+  padding-top: 3%;
+  font-weight: 200;
+  text-transform: uppercase;
 }
+
+.animal-index-wrapper {
+  background: #f6f6f6;
+
+  .animals-wrapper {
+    @include outer-container;
+    h1 {
+      padding-bottom: 3%;
+      padding-top: 5%;
+      font-weight: 200;
+      text-transform: uppercase;
+      @include media($mobile-only) {
+        text-align: center;
+      }
+    }
+    .wrapper {
+      padding-top: 0%;
+      @include span-columns(12);
+      @include flex;
+      @include flex-justify(center);
+      @include flex-flow(row wrap);
+      .animal-index {
+        @include media($tablet) {
+          @include span-columns(2.5 of 12);
+          @include omega(4n);
+        }
+        .feature-animal {
+          height: auto;
+        }
+        #image {
+          background: #D3E397;
+          padding: 10px;
+          -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+          -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+          box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+          @include media($mobile-only) {
+            padding-left: 20%;
+            padding-right: 20%;
+          }
+        }
+        #title {
+          @include media($mobile-only) {
+            text-align: center;
+          }
+        }
+
+        #title {
+          h4 {
+            font-size: 1.5em;
+            margin-top: 10px;
+            font-weight: 200;
+            color: #222222;
+          }
+        }
+      }
+    }
+    #infinite-scrolling {
+      display: none;
+    }
+  }
+}
+

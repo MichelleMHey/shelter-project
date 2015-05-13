@@ -8,6 +8,11 @@ class AnimalsController < ApplicationController
     @animal = Animal.find(params[:id])
   end
 
+  def feature
+    @animal = Animal.featured_animals
+    respond_with @animal
+  end
+
   private
 
   def animal_params

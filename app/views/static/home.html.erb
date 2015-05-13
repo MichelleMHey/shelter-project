@@ -4,27 +4,41 @@
       <li style="background-color: #111c3d; background-image: url('https://download.unsplash.com/18/pups.JPG')">
         <div class="slide-text" id="hero-text">
           <h1>Animal Name</h1>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat</p>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
           <button>Button</button>
         </div>
       </li>
       <li style="background-color: #111c3d; background-image: url('http://animalpetdoctor.homestead.com/acat5.jpg')">
         <div class="slide-text" id="hero-text">
           <h1>Animal Name</h1>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat</p>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
           <button>Button</button>
         </div>
       </li>
       <li style="background-color: #111c3d; background-image: url('https://download.unsplash.com/photo-1421098518790-5a14be02b243')">
         <div class="slide-text" id="hero-text">
           <h1>Animal Name</h1>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat</p>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
           <button>Button</button>
         </div>
       </li>
       
     </ul>
   </div>
-  <div class="home">
+
+  <h1 id="titles">Featured Pets</h1>
+  <div class="animal-index-wrapper">
+    <div class="animals-wrapper">
+      <div class="wrapper">
+        <% @featured_animals.each do |animal| %>
+          <%= link_to(animal, :class => "animal-index") do %>
+            <div id="image"><%= image_tag animal.profile_image_url.to_s, :class => "feature-animal" %></div>
+            <div id="title">
+              <h4><%= animal.name %></h4>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
